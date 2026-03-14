@@ -1,5 +1,5 @@
-def backtracking():
-    return 0
+import networkx as nx
+import matplotlib.pyplot as plt
 
-print("hello world")
-print("hi folks lets work on this project")
+
+#display a graph and animations of the solver and other things also a website can be created for this purpose where one can input a array for this visaully
