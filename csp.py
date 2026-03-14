@@ -28,7 +28,32 @@ class csp :
         
         return (hard_constraint or soft_constarint)
 
+class csp_solver:
+    def __init__(self,csp_problem):
+        self.csp_problem = csp_problem
     
+    def backtracking(self):
+        return 0
+    
+    def ac3(self):
+        return 0
+    
+    def MRV(self):
+        return 0
+    
+    def LCV(self):
+        return 0
+
+    def solution_checker(self):
+        constraint_free = self.csp_problem.constraints()
+        complete=True
+        for i in range(len(self.csp_problem.variables)):
+            if(self.csp_problem.variables[i]['f']==0):
+                complete=False
+                break
+        return (constraint_free and complete)
+        
+
 base_towers=[{'x':0,'y':0,'f':0},{'x':1,'y':1,'f':0},{'x':2,'y':2,'f':0}]
 available_frequencies=[1,2,3,4]
 
